@@ -46,7 +46,7 @@ const Navbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-8">
         
-        {/* Logo */}
+
         <div className="flex items-center gap-3 group cursor-pointer">
           <div className={`relative transition-transform duration-300 group-hover:scale-110 ${
             scrolled ? 'w-10 h-10' : 'w-10 h-10'
