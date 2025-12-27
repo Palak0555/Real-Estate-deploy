@@ -7,6 +7,9 @@ import right_arrow from './right_arrow.svg'
 import header_img from './header_img.png'
 import brand_img from './brand_img.png'
 import project_img_2 from './project_img_2.jpg'
+import project_img_3 from './project_img_3.jpg'
+import project_img_4 from './project_img_4.jpg'
+import project_img_6 from './project_img_6.jpg'
 import flat1 from './flat1.jpeg'
 import flat1b from './flat1b.jpeg'
 import flat1c from './flat1c.jpeg'
@@ -37,6 +40,9 @@ import flats2 from './flats2.jpeg'
 import flats3 from './flats3.jpeg'
 import flats4 from './flats4.jpeg'
 import flatvideo from './flatvideo.mp4'
+import salevideo1 from './salevideo1.mp4'
+import salevideo2 from './salevideo2.mp4'
+import salevideo3 from './salevideo3.mp4'
 
 export const assets = {
   logo,
@@ -74,10 +80,16 @@ export const assets = {
   menu_icon,
   star_icon,
   project_img_2,
+  project_img_3,
+  project_img_4,
+  project_img_6,
   header_img,
   brand_img,
   left_arrow,
   right_arrow,
+  salevideo1,
+  salevideo2,
+  salevideo3,
 }
 
 export const projectsData = [
@@ -142,6 +154,52 @@ export const salesData = [
     thumbnail: flats1,
     images: [flats1, flats2, flats3, flats4],
     videos: []
+  },
+  {
+    id: "jm-florence",
+    title: "JM Florence F-2303",
+    price: "₹95 Lac",
+    demand: "₹95 Lac",
+    lending: null,
+    location: "Greater Noida, Uttar Pradesh",
+    type: "2BHK Raw Flat",
+    size: "1100 sq.ft",
+    floor: "23rd Floor (Top 25th Floor)",
+    description: "Raw flat with proper sunlight, registered unit available for visits",
+    address: "JM Florence, Greater Noida, Uttar Pradesh",
+    thumbnail: project_img_3,
+    images: [],
+    videos: [salevideo1]
+  },
+  {
+    id: "galaxy-north-avenue-2",
+    title: "Galaxy North Avenue 2",
+    price: "₹1.40 Cr",
+    demand: "₹1.40 Cr",
+    lending: "₹1.36 Cr",
+    location: "Greater Noida, Uttar Pradesh",
+    type: "4BHK Apartment",
+    size: "1755 sq.ft",
+    description: "Spacious 4BHK apartment with excellent amenities and connectivity",
+    address: "Galaxy North Avenue 2, Greater Noida, Uttar Pradesh",
+    thumbnail: project_img_4,
+    images: [],
+    videos: [salevideo2]
+  },
+  {
+    id: "fusion-homes-sale",
+    title: "Fusion Homes",
+    price: "₹1.20 Cr",
+    demand: "₹1.25 Cr",
+    lending: null,
+    location: "Tech Zone IV, Greater Noida",
+    type: "3BHK Semi-Furnished",
+    size: "1430 sq.ft",
+    description: "Semi-furnished 3BHK flat in prime location with modern amenities",
+    address: "Fusion Homes, Tech Zone IV, Greater Noida, Uttar Pradesh",
+    thumbnail: project_img_6,
+    images: [],
+    videos: [salevideo3]
   }
 ]
 

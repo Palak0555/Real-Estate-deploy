@@ -94,6 +94,30 @@ const SalesDetails = () => {
                   </svg>
                   RERA Approved
                 </span>
+                {property.type && (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-semibold border border-blue-200">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                    </svg>
+                    {property.type}
+                  </span>
+                )}
+                {property.size && (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-purple-50 text-purple-700 rounded-full text-sm font-semibold border border-purple-200">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                    </svg>
+                    {property.size}
+                  </span>
+                )}
+                {property.floor && (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-50 text-indigo-700 rounded-full text-sm font-semibold border border-indigo-200">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z" />
+                    </svg>
+                    {property.floor}
+                  </span>
+                )}
                 {property.demand && (
                   <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-orange-50 text-orange-700 rounded-full text-sm font-semibold border border-orange-200">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -104,7 +128,7 @@ const SalesDetails = () => {
                   </span>
                 )}
                 {property.lending && (
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-[#0078DB] rounded-full text-sm font-semibold border border-blue-200">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-teal-50 text-teal-700 rounded-full text-sm font-semibold border border-teal-200">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                     </svg>
@@ -124,63 +148,71 @@ const SalesDetails = () => {
               </button>
             </div>
           </div>
+
+          {/* Property Description */}
+          {property.description && (
+            <div className="bg-blue-50 border-l-4 border-[#0078DB] p-4 rounded-r-lg">
+              <p className="text-gray-700 text-sm md:text-base">{property.description}</p>
+            </div>
+          )}
         </div>
 
-       
-        <div className="mb-10">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 bg-blue-100 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-[#0078DB]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
+        {/* Photo Gallery Section - Only show if images exist */}
+        {property.images && property.images.length > 0 && (
+          <div className="mb-10">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2.5">
+                <div className="w-9 h-9 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-[#0078DB]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h2 className="text-2xl font-bold text-gray-900">
+                  Photo Gallery
+                </h2>
               </div>
-              <h2 className="text-2xl font-bold text-gray-900">
-                Photo Gallery
-              </h2>
+              <span className="text-sm text-gray-500 font-medium bg-gray-100 px-3 py-1.5 rounded-full">
+                {property.images.length} Photos
+              </span>
             </div>
-            <span className="text-sm text-gray-500 font-medium bg-gray-100 px-3 py-1.5 rounded-full">
-              {property.images.length} Photos
-            </span>
-          </div>
 
-         
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {property.images.map((img, index) => (
-              <div
-                key={index}
-                onClick={() => openLightbox(index)}
-                className="group relative bg-white rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 p-2.5"
-              >
-                <div className="relative w-full bg-gray-100 rounded-lg overflow-hidden" style={{ paddingBottom: '75%' }}>
-                  <img
-                    src={img}
-                    alt={`${property.title} - Photo ${index + 1}`}
-                    className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                  />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-white/90 backdrop-blur-sm p-3 rounded-full">
-                      <svg className="w-6 h-6 text-[#0078DB]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                      </svg>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {property.images.map((img, index) => (
+                <div
+                  key={index}
+                  onClick={() => openLightbox(index)}
+                  className="group relative bg-white rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 p-2.5"
+                >
+                  <div className="relative w-full bg-gray-100 rounded-lg overflow-hidden" style={{ paddingBottom: '75%' }}>
+                    <img
+                      src={img}
+                      alt={`${property.title} - Photo ${index + 1}`}
+                      className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    />
+                  
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="bg-white/90 backdrop-blur-sm p-3 rounded-full">
+                        <svg className="w-6 h-6 text-[#0078DB]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="absolute bottom-3 left-3 text-white">
+                      <p className="text-xs font-semibold">Click to view</p>
                     </div>
                   </div>
-                  <div className="absolute bottom-3 left-3 text-white">
-                    <p className="text-xs font-semibold">Click to view</p>
+
+                  {/* Image Number Badge */}
+                  <div className="absolute top-2 right-2 bg-black/70 text-white px-2.5 py-0.5 rounded-full text-xs font-semibold z-10">
+                    {index + 1}
+                  </div>
                   </div>
                 </div>
-
-                {/* Image Number Badge */}
-                <div className="absolute top-2 right-2 bg-black/70 text-white px-2.5 py-0.5 rounded-full text-xs font-semibold z-10">
-                  {index + 1}
-                </div>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Video Tour Section */}
         {property.videos && property.videos.length > 0 && (
@@ -198,7 +230,7 @@ const SalesDetails = () => {
                 </h2>
               </div>
               <span className="text-sm text-gray-500 font-medium bg-gray-100 px-3 py-1.5 rounded-full">
-                {property.videos.length} Videos
+                {property.videos.length} {property.videos.length === 1 ? 'Video' : 'Videos'}
               </span>
             </div>
 
@@ -251,8 +283,8 @@ const SalesDetails = () => {
 
       </div>
 
-    
-      {selectedImage && (
+      {/* Lightbox - Only show if images exist */}
+      {selectedImage && property.images && property.images.length > 0 && (
         <div 
           className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4"
           onClick={closeLightbox}
