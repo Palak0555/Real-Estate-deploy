@@ -1,4 +1,4 @@
-import logo from './logo.png'
+import logo3 from './logo3.png'
 import cross_icon from './cross_icon.svg'
 import menu_icon from './menu_icon.svg'
 import star_icon from './star_icon.svg'
@@ -45,7 +45,7 @@ import salevideo2 from './salevideo2.mp4'
 import salevideo3 from './salevideo3.mp4'
 
 export const assets = {
-  logo,
+  logo3,
   flat1,
   flat1b,
   flat1c,

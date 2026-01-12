@@ -52,7 +52,7 @@ const Navbar = () => {
             scrolled ? 'w-10 h-10' : 'w-10 h-10'
           }`}>
             <img 
-              src={assets.logo}
+              src={assets.logo3}
               alt="LIVMETRO"
               className="h-full w-full object-contain"
             />
