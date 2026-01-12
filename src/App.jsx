@@ -12,6 +12,8 @@ import Sales from './components/Sales'
 
 import ProjectDetails from './pages/ProjectDetails'
 import SalesDetails from './pages/SalesDetails'
+import AdminLogin from './pages/AdminLogin'
+import Admin from './pages/Admin'
 
 
 const Home = () => {
@@ -36,14 +38,18 @@ const App = () => {
       <div className="w-full overflow-hidden">
         <Routes>
 
-         
+          {/* Home Page */}
           <Route path="/" element={<Home />} />
 
-          
+          {/* Project Details */}
           <Route path="/project/:id" element={<ProjectDetails />} />
 
-          
+          {/* Sale Details */}
           <Route path="/sale/:id" element={<SalesDetails />} />
+
+          {/* Admin Routes */}
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={<Admin />} />
 
         </Routes>
       </div>

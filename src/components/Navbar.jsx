@@ -133,7 +133,7 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center gap-4">
           {/* Contact Number */}
           <a 
-            href="tel:+91 91234 10620" 
+            href="tel:+91 79820 78754" 
             className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
               scrolled 
                 ? 'text-gray-700 hover:bg-gray-100' 
@@ -143,7 +143,9 @@ const Navbar = () => {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <span className="text-sm font-semibold hidden xl:inline">+91 91234 10620</span>
+            <span className="text-sm font-semibold hidden xl:inline">+91 79820 78754
+
+            </span>
           </a>
 
           {/* Login Button */}
@@ -235,7 +237,7 @@ const Navbar = () => {
           {/* Mobile Actions */}
           <div className="mt-6 space-y-3">
             <a 
-              href="tel:+91 91234 10620"
+              href="tel:+91 79820 78754"
               className={`flex items-center justify-center gap-2 w-full px-6 py-3 rounded-lg border-2 font-semibold transition-all ${
                 scrolled 
                   ? 'border-[#0078DB] text-[#0078DB] hover:bg-[#0078DB] hover:text-white' 
