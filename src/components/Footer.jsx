@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Linkedin, ArrowRight } from 'lucide-react';
-import logo from '../assets/logo.png';
+import logo3 from '../assets/logo3.png';
 
 const Footer = () => {
   const quickLinks = [
@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 sm:gap-2.5 mb-3 sm:mb-4">
               <img
-                src={logo}
+                src={logo3}
                 alt="LIVMETRO Logo"
                 className="h-8 sm:h-9 w-auto"
               />
